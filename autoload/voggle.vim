@@ -1,3 +1,3 @@
-function! s:VoggleTesting()
+function! voggle#VoggleTesting()
 	echo "Test"
 endfunction
