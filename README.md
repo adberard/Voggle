@@ -9,7 +9,7 @@ For example:
 It will (try to) toggle whatever item the cursor is over when `:Voggle` is called.  
 So you can just bind that to some key with for example: `nmap t :Voggle<Enter>`  
 
-You can also toggle between more than 2 things, like: 'A -> B -> C -> A'
+You can also toggle between more than 2 things, like: `A -> B -> C -> A`
 
 ---
 
