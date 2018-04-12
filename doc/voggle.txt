@@ -1,1 +1,2 @@
-*Voggle:* Yet another toggle plugin for vim.
+*Voggle*
+Voggle allows you to toggle between values.
