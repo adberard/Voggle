@@ -4,8 +4,13 @@ function! voggle#toggle()
 	let l:output = voggle#find_pair(s:current_line, s:current_pos[2])
 
 	if type(l:output) == type([])
-		let l:new_line = s:current_line[:l:output[1]-1] . g:toggle_pairs[l:output[0]]  . s:current_line[l:output[1]+l:output[2]:]
+		let l:new_line = (l:output[1] == 0 ? "" : s:current_line[:l:output[1]-1]) . g:toggle_pairs[l:output[0]]  . s:current_line[l:output[1]+l:output[2]:]
 		call setline(s:current_pos[1], l:new_line)
+		let l:new_size = strchars(g:toggle_pairs[l:output[0]])
+		if l:new_size < (s:current_pos[2] - l:output[1])
+			let s:current_pos[2] = (l:output[1] + l:new_size)
+			call setpos('.', s:current_pos)
+		endif
 	endif
 
 endfunction

@@ -3,14 +3,30 @@ let g:toggle_pairs = {
 	\ "false": "true",
 	\ "True": "False",
 	\ "False": "True",
+	\ "yes": "no",
+	\ "no": "yes",
+	\ "Yes": "No",
+	\ "No": "Yes",
 	\ "yep": "nope",
 	\ "nope": "yep",
 	\ "Yep": "Nope",
 	\ "Nope": "Yep",
+	\ "on": "off",
+	\ "off": "on",
+	\ "On": "Off",
+	\ "Off": "On",
 	\ ">": "<",
 	\ "<": ">",
 	\ "==": "!=",
-	\ "!=": "=="
+	\ "!=": "==",
+	\ "&&": "||",
+	\ "||": "&&",
+	\ ".": "->",
+	\ "->": ".",
+	\ "1": "0",
+	\ "0": "1",
+	\ "+": "-",
+	\ "-": "+"
 	\ }
 
 function! voggle#get_biggest()
@@ -25,10 +41,3 @@ let g:biggest_pair = voggle#get_biggest()
 
 command! Voggle call voggle#toggle()
 
-" These line are just here for some testing.
-" False	false
-" True	true
-" Nope	nope
-" Yep	yep
-" >	<
-" ==	!=
