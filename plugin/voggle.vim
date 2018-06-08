@@ -34,6 +34,7 @@ let g:voggle_pairs = [
 	\ ["real", "fake"],
 	\ ["exec", "kill"],
 	\ ["rare", "common"],
+	\ ["active", "inactive"],
 	\ ["transparent", "opaque"],
 	\ ["transparency", "opacity"],
 	\ ["safe", "unsafe"],
